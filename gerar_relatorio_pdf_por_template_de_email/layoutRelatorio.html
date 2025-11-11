@@ -1,0 +1,119 @@
+<#compress>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Relatório de Recebimento</title>
+	
+	<#assign sCabecalho = "background-color: #004a9f; color: #FFFFFF; padding: 15px; text-align: center;">
+	<#assign sH1 = "font-size: 18pt; font-weight: bold; margin: 0; color: #FFFFFF;">
+	<#assign sH2 = "font-size: 14pt; font-weight: bold; color: #333333;">
+
+	<#assign sLabel = "border:solid 1px #ccc; padding:10px 8px; font-size: 9pt; font-weight:bold; background-color: #f6f6f6; width: 30%;">
+	<#assign sValor = "border:solid 1px #ccc; padding:10px 8px; font-size: 10pt;">
+	
+</head>
+<body style="margin:0; padding:0; font-family: Arial, sans-serif;">
+	
+	<table class="corpo" cellpadding="0" cellspacing="0" width="100%">
+		
+		<tr>
+			<td align="center" valign="top">
+				<table align="center" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td align="center" valign="top" style="${sCabecalho}">
+							<h1 style="${sH1}">Relatório de Recebimento de Mercadoria</h1>
+						</td>
+					</tr>
+					<tr><td height="20">&nbsp;</td></tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center" valign="top">
+				<table align="center" width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">Data Emissão</td>
+							<td align="left" valign="top" style="${sValor}">${dataEmissao!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">Data Processo</td>
+							<td align="left" valign="top" style="${sValor}">${dataProcesso!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">1. Nome Colaborador</td>
+							<td align="left" valign="top" style="${sValor}">${nomeColaborador!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">2. Nome Fornecedor</td>
+							<td align="left" valign="top" style="${sValor}">${nomeFornecedor!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">3. Unidade NF</td>
+							<td align="left" valign="top" style="${sValor}">${unidadeNF!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">4. Número NF</td>
+							<td align="left" valign="top" style="${sValor}">${numeroNF!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">6. Qtde Volumes</td>
+							<td align="left" valign="top" style="${sValor}">${qtdeVolumes!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">7. Inspeção Visual</td>
+							<td align="left" valign="top" style="${sValor}">${strInspecao!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">8. Itens Conferidos</td>
+							<td align="left" valign="top" style="${sValor}">${itensConferidos!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">9. Documentos Anexos</td>
+							<td align="left" valign="top" style="${sValor}">${strDocumentos!''}</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" style="${sLabel}">10. Geolocalização</td>
+							<td align="left" valign="top" style="${sValor}">${geolocalizacao!''}</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center" valign="top" style="page-break-before: always;">
+				<table align="center" width="100%" cellpadding="0" cellspacing="0">
+					<tr><td height="20">&nbsp;</td></tr>	
+					<tr>
+						<td align="center" valign="top">
+							<h2 style="${sH2}">Anexos de Imagens</h2>
+						</td>
+					</tr>
+					<tr><td height="10">&nbsp;</td></tr>	
+					<tr>
+						<td align="left" valign="top" style="${sValor}"><img src="${imagem1!''}" alt=""></img></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+				<table align="center" width="100%" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr><td height="20">&nbsp;</td></tr>	
+					<tr>
+						<td align="center" valign="middle">
+							<span style="font-size: 11px;"><b>Desenvolvido por</b>: ${nome!''} ${sobrenome!''}</span>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+</#compress>
